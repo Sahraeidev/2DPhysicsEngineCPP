@@ -4,7 +4,8 @@
 class Vector2D{
 
   public:
-  
+  Vector2D(float px,float py) : X(px), Y(py){}
+
   float GetX() const {return X;}
   float GetY() const {return Y;}
 
@@ -13,14 +14,14 @@ class Vector2D{
 
   Vector2D operator+(const Vector2D &Vec)
   {
-    Vector2D result;
+    Vector2D result(0,0);
     result.SetX(X + Vec.GetX());
     result.SetY(Y + Vec.GetY());
     return result;
   }
    Vector2D operator-(const Vector2D &Vec)
   {
-    Vector2D result;
+    Vector2D result(0,0);
     result.SetX(X - Vec.GetX());
     result.SetY(Y - Vec.GetY());
     return result;
